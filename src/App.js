@@ -7,10 +7,10 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import Services from './components/Services';
-import Team from './components/Team';
-import AdminPanel from './components/AdminPanel';
-import PrivateRoute from './utils/PrivateRoute';
-import Register from './components/Register';
+import Partner from "./components/Partner";
+import AdminPanel from "./components/AdminPanel";
+import PrivateRoute from "./utils/PrivateRoute";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -23,9 +23,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/team" element={<Team />} />
+        <Route path="/Partner" element={<Partner />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/admin" element={<PrivateRoute component={AdminPanel} />} />
+        <Route
+          path="/admin"
+          element={<PrivateRoute component={AdminPanel} />}
+        />
       </Routes>
     </Router>
   );

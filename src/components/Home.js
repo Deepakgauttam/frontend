@@ -43,7 +43,9 @@ function Home() {
       <section className="hero">
         <h1>Welcome to Our IT Company</h1>
         <p>Providing top-notch IT solutions for your business.</p>
-        <Link to="/contact" className="contact-button">Contact Us</Link>
+        <Link to="/contact" className="contact-button">
+          Contact Us
+        </Link>
       </section>
       <section className="services">
         <h2>Our Services</h2>
@@ -54,7 +56,10 @@ function Home() {
             </div>
             <div className="card-content">
               <h3>Web Development</h3>
-              <p>We build responsive and scalable web applications to meet your business needs.</p>
+              <p>
+                We build responsive and scalable web applications to meet your
+                business needs.
+              </p>
             </div>
           </div>
           <div className="card">
@@ -63,7 +68,10 @@ function Home() {
             </div>
             <div className="card-content">
               <h3>Mobile Development</h3>
-              <p>Creating innovative mobile applications for Android and iOS platforms.</p>
+              <p>
+                Creating innovative mobile applications for Android and iOS
+                platforms.
+              </p>
             </div>
           </div>
           <div className="card">
@@ -72,7 +80,10 @@ function Home() {
             </div>
             <div className="card-content">
               <h3>Cloud Solutions</h3>
-              <p>Offering reliable and secure cloud computing services tailored to your needs.</p>
+              <p>
+                Offering reliable and secure cloud computing services tailored
+                to your needs.
+              </p>
             </div>
           </div>
           <div className="card">
@@ -81,7 +92,10 @@ function Home() {
             </div>
             <div className="card-content">
               <h3>Cybersecurity</h3>
-              <p>Security assessment, threat detection, and compliance solutions to protect your data.</p>
+              <p>
+                Security assessment, threat detection, and compliance solutions
+                to protect your data.
+              </p>
             </div>
           </div>
           <div className="card">
@@ -90,7 +104,10 @@ function Home() {
             </div>
             <div className="card-content">
               <h3>Networking Services</h3>
-              <p>Design, configuration, and management of network infrastructure for seamless connectivity.</p>
+              <p>
+                Design, configuration, and management of network infrastructure
+                for seamless connectivity.
+              </p>
             </div>
           </div>
           <div className="card">
@@ -99,25 +116,16 @@ function Home() {
             </div>
             <div className="card-content">
               <h3>Data Management</h3>
-              <p>Data warehousing, analytics, and backup solutions to manage and secure your information.</p>
+              <p>
+                Data warehousing, analytics, and backup solutions to manage and
+                secure your information.
+              </p>
             </div>
           </div>
           {/* Add more cards if needed */}
         </Slider>
       </section>
-      <section className="about">
-        <h2>About Us</h2>
-        <p>
-          Our IT company has been delivering high-quality solutions for over a decade. Our team of experts specializes in various fields of technology to provide you with the best service possible.
-        </p>
-      </section>
-      <section className="contact-info">
-        <h2>Contact Information</h2>
-        <p>Email: info@ouritcompany.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 IT Street, Tech City</p>
-      </section>
-      <Footer /> 
+      <Footer />
     </div>
   );
 }

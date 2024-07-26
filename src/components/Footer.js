@@ -24,7 +24,8 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact Information</h3>
           <p>
-            <strong>Address:</strong> 261/153,  Sector 26, NRI Circle, Pratap Nagar, Jaipur, Rajasthan, India
+            <strong>Address:</strong> 261/153, Sector 26, NRI Circle, Pratap
+            Nagar, Jaipur, Rajasthan, India
           </p>
           <p>
             <strong>Phone:</strong> +91 7791999124
@@ -37,7 +38,7 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/services">Services</Link>

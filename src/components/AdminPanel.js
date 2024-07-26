@@ -6,33 +6,33 @@ const AdminPanel = () => {
   const { user } = useAuth();
   const [services, setServices] = useState([]);
   const [projects, setProjects] = useState([]);
-  const [teamMembers, setTeamMembers] = useState([]);
+  const [PartnerMembers, setPartnerMembers] = useState([]);
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
     fetchServices();
     fetchProjects();
-    fetchTeamMembers();
+    fetchPartnerMembers();
     fetchContacts();
   }, []);
 
   const fetchServices = async () => {
-    const response = await API.get('/services');
+    const response = await API.get("/services");
     setServices(response.data);
   };
 
   const fetchProjects = async () => {
-    const response = await API.get('/projects');
+    const response = await API.get("/projects");
     setProjects(response.data);
   };
 
-  const fetchTeamMembers = async () => {
-    const response = await API.get('/team');
-    setTeamMembers(response.data);
+  const fetchPartnerMembers = async () => {
+    const response = await API.get("/Partner");
+    setPartnerMembers(response.data);
   };
 
   const fetchContacts = async () => {
-    const response = await API.get('/contacts');
+    const response = await API.get("/contacts");
     setContacts(response.data);
   };
 
@@ -42,7 +42,7 @@ const AdminPanel = () => {
       <div>
         <h2>Services</h2>
         <ul>
-          {services.map(service => (
+          {services.map((service) => (
             <li key={service._id}>{service.name}</li>
           ))}
         </ul>
@@ -50,15 +50,15 @@ const AdminPanel = () => {
       <div>
         <h2>Projects</h2>
         <ul>
-          {projects.map(project => (
+          {projects.map((project) => (
             <li key={project._id}>{project.name}</li>
           ))}
         </ul>
       </div>
       <div>
-        <h2>Team Members</h2>
+        <h2>Partner Members</h2>
         <ul>
-          {teamMembers.map(member => (
+          {PartnerMembers.map((member) => (
             <li key={member._id}>{member.name}</li>
           ))}
         </ul>
@@ -66,7 +66,7 @@ const AdminPanel = () => {
       <div>
         <h2>Contacts</h2>
         <ul>
-          {contacts.map(contact => (
+          {contacts.map((contact) => (
             <li key={contact._id}>{contact.email}</li>
           ))}
         </ul>
