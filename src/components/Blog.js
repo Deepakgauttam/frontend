@@ -1,6 +1,7 @@
 import React from 'react';
 import './Blog.css';
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 function Blog() {
   const blogPosts = [
@@ -97,6 +98,7 @@ function Blog() {
   ];
 
   return (
+    <div>
     <div className="blog">
       <h1>Our Blog</h1>
       <p>Read our latest updates and articles.</p>
@@ -116,6 +118,8 @@ function Blog() {
           </div>
         ))}
       </div>
+    </div>
+    <Footer />
     </div>
   );
 }

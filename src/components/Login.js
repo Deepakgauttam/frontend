@@ -2,10 +2,11 @@ import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { FaGoogle, FaFacebookF, FaMobileAlt } from 'react-icons/fa';
 import './Login.css';
+import Footer from "./Footer";
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const { login } = useContext(AuthContext);
 
@@ -27,35 +28,46 @@ function Login() {
   };
 
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Email</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <label>Password</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <div className="remember-me">
+    <div>
+      <div className="login">
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit}>
+          <label>Email</label>
           <input
-            type="checkbox"
-            checked={rememberMe}
-            onChange={(e) => setRememberMe(e.target.checked)}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <label>Remember Me</label>
+          <label>Password</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <div className="remember-me">
+            <input
+              type="checkbox"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            />
+            <label>Remember Me</label>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <hr className="divider" />
+        <div className="social-login">
+          <button className="google-login" onClick={handleGoogleLogin}>
+            <FaGoogle className="icon" /> Login with Google
+          </button>
+          <button className="facebook-login" onClick={handleFacebookLogin}>
+            <FaFacebookF className="icon" /> Login with Facebook
+          </button>
+          <button className="otp-login" onClick={handleOTPLogin}>
+            <FaMobileAlt className="icon" /> Login with OTP
+          </button>
         </div>
-        <button type="submit">Login</button>
-      </form>
-      <hr className="divider" />
-      <div className="social-login">
-        <button className="google-login" onClick={handleGoogleLogin}>
-          <FaGoogle className="icon" /> Login with Google
-        </button>
-        <button className="facebook-login" onClick={handleFacebookLogin}>
-          <FaFacebookF className="icon" /> Login with Facebook
-        </button>
-        <button className="otp-login" onClick={handleOTPLogin}>
-          <FaMobileAlt className="icon" /> Login with OTP
-        </button>
       </div>
+      <Footer />
     </div>
   );
 }
